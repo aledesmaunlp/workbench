@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Hábitos Saludables</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Registro de Hábitos Saludables</h2>
+        <form id="registroForm">
+            <div class="date-container">
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" required>
+            </div>
+            <div class="habit">
+                <h3>Alimentación (en Calorías)</h3>
+                <div class="meal">
+                    <label for="desayuno">Desayuno:</label>
+                    <input type="text" id="desayunoTipo" placeholder="Tipo">
+                    <input type="number" id="desayunoCantidad" placeholder="Cantidad">
+                </div>
+                <div class="meal">
+                    <label for="almuerzo">Almuerzo:</label>
+                    <input type="text" id="almuerzoTipo" placeholder="Tipo">
+                    <input type="number" id="almuerzoCantidad" placeholder="Cantidad">
+                </div>
+                <div class="meal">
+                    <label for="colacion">Colación:</label>
+                    <input type="text" id="colacionTipo" placeholder="Tipo">
+                    <input type="number" id="colacionCantidad" placeholder="Cantidad">
+                </div>
+                <div class="meal">
+                    <label for="merienda">Merienda:</label>
+                    <input type="text" id="meriendaTipo" placeholder="Tipo">
+                    <input type="number" id="meriendaCantidad" placeholder="Cantidad">
+                </div>
+                <div class="meal">
+                    <label for="cena">Cena:</label>
+                    <input type="text" id="cenaTipo" placeholder="Tipo">
+                    <input type="number" id="cenaCantidad" placeholder="Cantidad">
+                </div>
+            </div>
+            <div class="habit">
+                <h3>Vicio (en unidades)</h3>
+                <label for="vicio">Vicio:</label>
+                <input type="text" id="vicioTipo" placeholder="Tipo">
+                <input type="number" id="vicioCantidad" placeholder="Cantidad">
+            </div>
+            <div class="habit">
+                <h3>Deporte (en metros)</h3>
+                <label for="deporte">Deporte:</label>
+                <input type="text" id="deporteTipo" placeholder="Tipo">
+                <input type="number" id="deporteCantidad" placeholder="Cantidad">
+            </div>
+            <div class="habit">
+                <h3>Otros</h3>
+                <label for="otros">Otros:</label>
+                <input type="text" id="otrosTipo" placeholder="Tipo">
+                <input type="number" id="otrosCantidad" placeholder="Cantidad">
+            </div>
+            <button type="button" onclick="registrar()">Enviar</button>
+        </form>
+    </div>
+    <div id="informe" class="container" style="display: none;">
+        <h2>Informe Final</h2>
+        <div id="informeText"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
